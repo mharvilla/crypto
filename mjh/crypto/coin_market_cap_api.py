@@ -10,7 +10,8 @@ def get_ticker():
     output_filename = '/Users/mharvill/Desktop/crypto_currency_data.tsv'
 
     with open(output_filename, 'w') as f:
-        f.write('symbol\tname\tprice (USD)\t1-hour change\t24-hour change\t7-day change\t\n')
+        f.write('symbol\tname\tprice (USD)\t1-hour change (%)\t24-hour change (%)\t7-day change (%)\t\n')
+
     for currency_index in range(n_currencies):
         current_json_response = json_response[currency_index]
         symbol = current_json_response['symbol']
